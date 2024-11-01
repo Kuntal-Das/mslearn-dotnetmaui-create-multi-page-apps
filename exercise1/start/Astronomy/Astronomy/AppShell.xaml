@@ -5,6 +5,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Astronomy.Pages"
     FlyoutIcon="moon.png">
+
+    <!--
+    <TabBar>
+        <Tab Title="Moon Phase" Icon="moon.png" >
+            <ShellContent ContentTemplate="{DataTemplate local:MoonPhasePage}"/>
+        </Tab>
+        <Tab Title="Sunrise" Icon="sun.png">
+            <ShellContent ContentTemplate="{DataTemplate local:SunrisePage}"/>
+        </Tab>
+    </TabBar>
+    -->
     <Shell.FlyoutHeader>
         <Grid HeightRequest="100" BackgroundColor="DarkSlateBlue">
             <Label 
@@ -13,14 +24,12 @@
                 VerticalTextAlignment="Center"
                 Margin="10, 0, 0, 20"
                 >Astronomy</Label>
-            <!-- <Image Source="moon.png"/> -->
+            <!--<Image Source="moon.png"/> -->
         </Grid>
     </Shell.FlyoutHeader>
-    <FlyoutItem Title="Moon Phase" Icon="moon.png">
-        <ShellContent ContentTemplate="{DataTemplate local:MoonPhasePage}"/>
-    </FlyoutItem>
-    <FlyoutItem Title="Sunrise" Icon="sun.ong">
-        <ShellContent ContentTemplate="{DataTemplate local:SunrisePage}"/>
+    <FlyoutItem Title="Astronomy" Icon="moon.png">
+        <ShellContent Title="Moon Phase" Icon="moon.png" ContentTemplate="{DataTemplate local:MoonPhasePage}"/>
+        <ShellContent Title="Sunrise" Icon="sun.ong" ContentTemplate="{DataTemplate local:SunrisePage}"/>
     </FlyoutItem>
     <FlyoutItem Title="About" Icon="question.png">
         <ShellContent ContentTemplate="{DataTemplate local:AboutPage}"/>
